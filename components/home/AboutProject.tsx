@@ -8,6 +8,7 @@ const AboutProject = () => {
 
       {/* description */}
       <div className='md:w-1/2 w-full  p-5'>
+       <h1 className='text-center font-bold text-2xl text-destructive'>How To i'ts Work</h1>
         <p className="text-gray-500 mt-2 text-center text-md">
         Best wishes for you. First, log in to our app. You will be taken to a dashboard where, using the sidebar options, you can make a phone recording. If you don’t have an account, sign up and provide some details about your work, then you’re done.
         </p>
@@ -26,3 +27,4 @@ const AboutProject = () => {
 }
 
 export default AboutProject
+
