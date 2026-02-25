@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import React from 'react';
-import { navData } from './data/navData';
 import { Button } from './ui/button';
 
 const Navbar = () => {
@@ -16,20 +15,6 @@ const Navbar = () => {
         >
           Voice<span className="text-accent"> Nest</span>
         </Link>
-
-      
-        <ul className="flex items-center gap-6">
-          {navData.map((item) => (
-            <li key={item.id}>
-              <Link
-                href={item.path}
-                className="text-foreground  hover:text-primary font-medium transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
 
       
         <Link href="/sign_in" className="ml-4">
