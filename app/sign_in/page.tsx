@@ -1,4 +1,7 @@
+import { Button } from '@/components/ui/button';
 import { Card, CardHeader } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import Link from 'next/link';
 import React from 'react';
 
 const Page = () => {
@@ -14,11 +17,11 @@ const Page = () => {
           >
              Phone Number
           </label>
-          <input
+          <Input
             type='number'
             id="phone"
             placeholder="Enter your email or phone"
-            className="w-full px-4 py-3 border border-border rounded-lg bg-input text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
+            className='py-5'
           />
         </div>
 
@@ -29,23 +32,21 @@ const Page = () => {
           >
             Password
           </label>
-          <input
+          <Input
             type="password"
             id="password"
             placeholder="Enter your password"
-            className="w-full px-4 py-3 border border-border rounded-lg bg-input text-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
+            className='py-5'
+             
           />
         </div>
 
-        <button className="w-full py-3 bg-accent text-primary-foreground rounded-lg font-semibold hover:bg-accent/90 transition-colors cursor-pointer">
-          Sign In
-        </button>
-
+         <Button className='py-5 cursor-pointer hover:bg-primary/50'>Sign In</Button>
         <p className="text-center text-sm text-foreground/80 mt-4">
           Don't have an account?{' '}
-          <a href="#" className="text-accent hover:underline">
+          <Link href="/sign_up" className="text-accent hover:underline">
             Sign Up
-          </a>
+          </Link>
         </p>
       </Card>
     </div>
