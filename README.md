@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Name
 
-## Getting Started
+A professional web application built with **Next.js** for frontend and **Node.js + Express + MongoDB** for backend.  
+Includes content protection features to prevent users from copying text.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Live Demo: [nothing]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+### Frontend (Next.js)
+- Fully responsive UI using Next.js 13 (App Router)
+- Optimized fonts using next/font
+- Client-side and server-side rendering support
+- Copy protection system:
+  - Disable right-click
+  - Disable text selection
+  - Disable Ctrl+C / Ctrl+X / Ctrl+A
+- Integration with backend APIs
+- Interactive components and pages
 
-To learn more about Next.js, take a look at the following resources:
+### Backend (Node.js + Express + MongoDB)
+- RESTful API design
+- MongoDB database with Mongoose ORM
+- Authentication & Authorization (JWT or Session-based)
+- CRUD operations for resources (Users, Products, etc.)
+- API protection for sensitive content
+- Proper error handling and validation
+- Middleware for security (CORS, Helmet, rate limiting)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Extra Features (Optional)
+- Real-time notifications or chat using Socket.io
+- File uploads with Multer / Cloud Storage
+- API testing with Postman / Jest
+- Deployment ready with Vercel (frontend) and Render / Railway / Heroku (backend)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Layer       | Technology |
+|------------|------------|
+| Frontend   | Next.js 13, React, Tailwind CSS / Chakra UI |
+| Backend    | Node.js, Express.js |
+| Database   | MongoDB, Mongoose |
+| Deployment | Vercel (frontend), Render / Railway / Heroku (backend) |
+| Tools      | Git, VSCode, Postman, ESLint, Prettier |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
