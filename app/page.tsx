@@ -1,8 +1,8 @@
-import Footer from '@/components/Footer'
-import AboutProject from '@/components/home/AboutProject'
-import DahboardImage from '@/components/home/DahboardImage'
-import HomeHero from '@/components/home/HomeHero'
-import Navbar from '@/components/Navbar'
+import Footer from '@/components/landing/Footer'
+import AboutProject from '@/components/landing/AboutProject'
+import DahboardImage from '@/components/landing/DahboardImage'
+import HomeHero from '@/components/landing/HomeHero'
+import Navbar from '@/components/landing/Navbar'
 import React from 'react'
 
 const page = () => {
