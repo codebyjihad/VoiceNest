@@ -11,9 +11,9 @@ type Call = {
 
 // Sample call data
 const initialCalls: Call[] = [
-  { id: 1, user: 'John Doe', time: '10:30 AM', duration: '5 min' },
-  { id: 2, user: 'Jane Smith', time: '11:15 AM', duration: '8 min' },
-  { id: 3, user: 'Alex Brown', time: '1:45 PM', duration: '3 min' },
+  { id: 1, user: 'John Doe', time: '10:30 AM', duration: '5 min ago' },
+  { id: 2, user: 'Jane Smith', time: '11:15 AM', duration: '8 min ago' },
+  { id: 3, user: 'Alex Brown', time: '1:45 PM', duration: '3 min ago' },
 ]
 
 const CallStory: React.FC = () => {
@@ -31,14 +31,14 @@ const CallStory: React.FC = () => {
         {calls.map((call) => (
           <li
             key={call.id}
-            className="flex justify-between items-center p-4 bg-card border-border rounded-lg shadow-md"
+            className="flex justify-between items-center p-4 bg-card border-border border-1 rounded-lg shadow-md"
           >
             <div>
               <p className="font-semibold text-foreground">{call.user}</p>
               <p className="text-foreground text-sm">{call.time}</p>
             </div>
             <div className="flex items-center gap-4">
-              <p className="text-foreground/80 text-sm">{call.duration}</p>
+              <p className="text-foreground/80 text-sm">{call.duration}  </p>
               <button
                 onClick={() => handleDelete(call.id)}
                 className="text-destructive/80 hover:text-foreground font-bold"
