@@ -12,10 +12,10 @@ import {
 } from "lucide-react"
 
 const menuItems = [
-  { name: "Users", href: "/dashboard/users", icon: Users },
-  { name: "Calls", href: "/dashboard/calls", icon: PhoneCall },
-  { name: "Recordings", href: "/dashboard/recordings", icon: Mic },
-  { name: "Settings", href: "/dashboard/settings", icon: Settings },
+  { name: "Users", href: "/", icon: Users },
+  { name: "Calls", href: "calls", icon: PhoneCall },
+  { name: "Recordings", href: "/recordings", icon: Mic },
+  { name: "Settings", href: "/settings", icon: Settings },
 ]
 
 const Sidebar = () => {
