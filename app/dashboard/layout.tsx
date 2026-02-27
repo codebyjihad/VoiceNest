@@ -1,9 +1,22 @@
-import React from 'react'
+import Sidebar from "@/components/layout/Sidebar"
+import Topbar from "@/components/layout/Topbar"
 
-const layout = () => {
+export default function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <div>layout</div>
+    <div className="flex min-h-screen bg-background">
+      <Sidebar />
+
+      <div className="flex flex-1 flex-col">
+        <Topbar />
+
+        <main className="flex-1 p-6 pb-20 md:pb-6">
+          {children}
+        </main>
+      </div>
+    </div>
   )
 }
-
-export default layout
