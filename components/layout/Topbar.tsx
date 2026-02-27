@@ -1,12 +1,26 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Image from "next/image"   
-import { Bell, Search } from "lucide-react"
+import { Bell, Search, Moon, Sun } from "lucide-react"
 import userProfile from '@/public/userprofile.png'
 
 const Topbar = () => {
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    const html = document.documentElement
+    setIsDark(html.classList.contains('dark'))
+  }, [])
+
+  const toggleDarkMode = () => {
+    const html = document.documentElement
+    html.classList.toggle('dark')
+    setIsDark(html.classList.contains('dark'))
+  }
+
   return (
-    <div className="w-full h-16 bg-card border-b border-border flex items-center justify-between px-6">
+    <div className="w-full h-16 bg-card dark:bg-card border-b border-border flex items-center justify-between px-6">
 
       {/* Left Side */}
       <h2 className="text-lg font-semibold text-foreground">
@@ -17,7 +31,7 @@ const Topbar = () => {
       <div className="flex items-center gap-4">
 
         {/* Search */}
-        <div className="hidden md:flex items-center bg-muted px-3 py-2 rounded-lg">
+        <div className="hidden md:flex items-center bg-muted dark:bg-muted-foreground/10 px-3 py-2 rounded-lg">
           <Search size={16} className="text-muted-foreground mr-2" />
           <input
             type="text"
@@ -44,6 +58,15 @@ const Topbar = () => {
             className="rounded-full"
           />
         </div>
+
+        {/* Dark Mode Toggle */}
+        <button
+          onClick={toggleDarkMode}
+          className="flex items-center justify-center w-8 h-8 rounded-full bg-muted dark:bg-muted-foreground/10 hover:bg-muted/80 dark:hover:bg-muted-foreground/20 transition"
+          title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        >
+          {isDark ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
 
       </div>
 

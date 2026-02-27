@@ -7,7 +7,7 @@ import {
   Users,
   PhoneCall,
   Mic,
-  Settings,
+   User,
   LogOut
 } from "lucide-react"
 
@@ -15,7 +15,7 @@ const menuItems = [
   { name: "Users", href: "/", icon: Users },
   { name: "Calls", href: "calls", icon: PhoneCall },
   { name: "Recordings", href: "/recordings", icon: Mic },
-  { name: "Settings", href: "/settings", icon: Settings },
+   { name: "Profile", href: "/profile", icon: User }
 ]
 
 const Sidebar = () => {
